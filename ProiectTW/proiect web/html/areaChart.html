@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+</head>
+
+<body>
+    <header>
+        <div class="logo">Auto Park Smart Explorer</div>
+        <nav class="appbar">
+            <button id="home-btn">Home</button>
+            <button id="settings-btn">Settings</button>
+            <button id="documentation-btn">Documentation</button>
+            <button id="logout-btn">Logout</button>
+        </nav>
+    </header>
+    <div class="flex-container">
+        <aside class="sidebar">
+            <button id="bar-chart-btn">Bar Chart Visualization</button>
+            <button id="pie-chart-btn">Pie Chart Visualization</button>
+            <button id="area-chart-btn">Area Chart Visualization</button>
+            <button id="cartographic-btn">Cartographic Visualization</button>
+        </aside>
+        <div class="main">
+            <div class="criteria">
+                <br>
+                <button type="button" id="Filtre" onclick="showFiltre()">Filtre</button>
+                <br>
+                <br>
+                <div id="filtre">
+                    <button id="alegeJudete" class="filtru" onclick="show('Judete')">Alege judete</button>
+                    <button id="ascundeJudete" class="optiuni-filtre" onclick="ascunde('Judete')">Ascunde</button>
+                    <button id="selectAllJudete" class="optiuni-filtre" onclick="selectAll('checkbox',1)">Selecteaza
+                        tot</button>
+                    <button id="deselectAllJudete" class="optiuni-filtre" onclick="selectAll('checkbox',2)">Deselecteaza
+                        tot</button>
+                    <br>
+                    <div id="listaJudete">
+                        <form class="listaCheckbox">
+
+                            <input type="checkbox" id="Alba" name="checkbox" value="Alba">
+                            <label for="Alba">Alba</label>
+                            <input type="checkbox" id="Arad" name="checkbox" value="Arad">
+                            <label for="Arad">Arad</label>
+                            <input type="checkbox" id="Arges" name="checkbox" value="Arges">
+                            <label for="Arges">Arges</label>
+                            <input type="checkbox" id="Bacau" name="checkbox" value="Bacau">
+                            <label for="Bacau">Bacau</label>
+                            <input type="checkbox" id="Bihor" name="checkbox" value="Bihor">
+                            <label for="Bihor">Bihor</label>
+                            <input type="checkbox" id="Bistrita-Nasaud" name="checkbox" value="Bistrita-Nasaud">
+                            <label for="Bistrita-Nasaud">Bistrita-Nasaud</label>
+                            <input type="checkbox" id="Botosani" name="checkbox" value="Botosani">
+                            <label for="Botosani">Botosani</label>
+                            <input type="checkbox" id="Braila" name="checkbox" value="Braila">
+                            <label for="Braila">Braila</label>
+                            <input type="checkbox" id="Brasov" name="checkbox" value="Brasov">
+                            <label for="Brasov">Brasov</label>
+                            <input type="checkbox" id="Bucuresti" name="checkbox" value="Bucuresti">
+                            <label for="Bucuresti">Bucuresti</label>
+                            <input type="checkbox" id="Buzau" name="checkbox" value="Buzau">
+                            <label for="Buzau">Buzau</label>
+                            <input type="checkbox" id="Calarasi" name="checkbox" value="Calarasi">
+                            <label for="Calarasi">Calarasi</label>
+                            <input type="checkbox" id="Caras-Severin" name="checkbox" value="Caras-Severin">
+                            <label for="Caras-Severin">Caras-Severin</label>
+                            <input type="checkbox" id="Cluj" name="checkbox" value="Cluj">
+                            <label for="Cluj">Cluj</label>
+                            <input type="checkbox" id="Constanta" name="checkbox" value="Constanta">
+                            <label for="Constanta">Constanta</label>
+                            <input type="checkbox" id="Covasna" name="checkbox" value="Covasna">
+                            <label for="Covasna">Covasna</label>
+                            <input type="checkbox" id="Dimbovita" name="checkbox" value="Dimbovita">
+                            <label for="Dimbovita">Dimbovita</label>
+                            <input type="checkbox" id="Dolj" name="checkbox" value="Dolj">
+                            <label for="Dolj">Dolj</label>
+                            <input type="checkbox" id="Galati" name="checkbox" value="Galati">
+                            <label for="Galati">Galati</label>
+                            <input type="checkbox" id="Gorj" name="checkbox" value="Gorj">
+                            <label for="Gorj">Gorj</label>
+                            <input type="checkbox" id="Giurgiu" name="checkbox" value="Giurgiu">
+                            <label for="Giurgiu">Giurgiu</label>
+                            <input type="checkbox" id="Harghita" name="checkbox" value="Harghita">
+                            <label for="Harghita">Harghita</label>
+                            <input type="checkbox" id="Hunedoara" name="checkbox" value="Hunedoara">
+                            <label for="Hunedoara">Hunedoara</label>
+                            <input type="checkbox" id="Ialomita" name="checkbox" value="Ialomita">
+                            <label for="Ialomita">Ialomita</label>
+                            <input type="checkbox" id="Iasi" name="checkbox" value="Iasi">
+                            <label for="Iasi">Iasi</label>
+                            <input type="checkbox" id="Ilfov" name="checkbox" value="Ilfov">
+                            <label for="Ilfov">Ilfov</label>
+                            <input type="checkbox" id="Maramures" name="checkbox" value="Maramures">
+                            <label for="Maramures">Maramures</label>
+                            <input type="checkbox" id="Mehedinti" name="checkbox" value="Mehedinti">
+                            <label for="Mehedinti">Mehedinti</label>
+                            <input type="checkbox" id="Mures" name="checkbox" value="Mures">
+                            <label for="Mures">Mures</label>
+                            <input type="checkbox" id="Neamt" name="checkbox" value="Neamt">
+                            <label for="Neamt">Neamt</label>
+                            <input type="checkbox" id="Olt" name="checkbox" value="Olt">
+                            <label for="Olt">Olt</label>
+                            <input type="checkbox" id="Prahova" name="checkbox" value="Prahova">
+                            <label for="Prahova">Prahova</label>
+                            <input type="checkbox" id="Salaj" name="checkbox" value="Salaj">
+                            <label for="Salaj">Salaj</label>
+                            <input type="checkbox" id="Satu Mare" name="checkbox" value="Satu Mare">
+                            <label for="Satu Mare">Satu Mare</label>
+                            <input type="checkbox" id="Sibiu" name="checkbox" value="Sibiu">
+                            <label for="Sibiu">Sibiu</label>
+                            <input type="checkbox" id="Suceava" name="checkbox" value="Suceava">
+                            <label for="Suceava">Suceava</label>
+                            <input type="checkbox" id="Teleorman" name="checkbox" value="Teleorman">
+                            <label for="Teleorman">Teleorman</label>
+                            <input type="checkbox" id="Timis" name="checkbox" value="Timis">
+                            <label for="Timis">Timis</label>
+                            <input type="checkbox" id="Tulcea" name="checkbox" value="Tulcea">
+                            <label for="Tulcea">Tulcea</label>
+                            <input type="checkbox" id="Vaslui" name="checkbox" value="Vaslui">
+                            <label for="Vaslui">Vaslui</label>
+                            <input type="checkbox" id="Vilcea" name="checkbox" value="Vilcea">
+                            <label for="Vilcea">Vilcea</label>
+                            <input type="checkbox" id="Vrancea" name="checkbox" value="Vrancea">
+                            <label for="Vrancea">Vrancea</label>
+                        </form>
+                    </div>
+                    <br>
+                    <br>
+                    <label style="font-size: 18px;" for="Criteriu">Alege un criteriu pentru diagrama </label>
+                    <br>
+                    <select name="Criteriu" id="Criteriu">
+                        <option value="Judet">Judet</option>
+                        <option value="Categorie">Categorie</option>
+                        <option value="Brand">Brand</option>
+                    </select>
+                    <br>
+                    <br>
+                    <button id="alegeAni" class="filtru" onclick="show('Ani')">Alege ani</button>
+                    <button id="ascundeAni" class="optiuni-filtre" onclick="ascunde('Ani')">Ascunde</button>
+                    <button id="selectAllAni" class="optiuni-filtre" onclick="selectAll('checkboxAni',1)">Selecteaza
+                        tot</button>
+                    <button id="deselectAllAni" class="optiuni-filtre" onclick="selectAll('checkboxAni',2)">Deselecteaza
+                        tot</button>
+                    <br>
+                    <div id="listaAni">
+                        <form class="listaCheckbox" id="Ani">
+
+                            <input type="checkbox" id="2012" name="checkboxAni" value="2012" checked>
+                            <label for="2012">2012</label>
+                            <input type="checkbox" id="2013" name="checkboxAni" value="2013" checked>
+                            <label for="2013">2013</label>
+                            <input type="checkbox" id="2014" name="checkboxAni" value="2014" checked>
+                            <label for="2014">2014</label>
+                            <input type="checkbox" id="2015" name="checkboxAni" value="2015" checked>
+                            <label for="2015">2015</label>
+                            <input type="checkbox" id="2016" name="checkboxAni" value="2016" checked>
+                            <label for="2016">2016</label>
+                            <input type="checkbox" id="2017" name="checkboxAni" value="2017" checked>
+                            <label for="2017">2017</label>
+                            <input type="checkbox" id="2018" name="checkboxAni" value="2018" checked>
+                            <label for="2018">2018</label>
+                            <input type="checkbox" id="2019" name="checkboxAni" value="2019" checked>
+                            <label for="2019">2019</label>
+                            <input type="checkbox" id="2020" name="checkboxAni" value="2020" checked>
+                            <label for="2020">2020</label>
+                            <input type="checkbox" id="2021" name="checkboxAni" value="2021" checked>
+                            <label for="2021">2021</label>
+                        </form>
+                    </div>
+                    <br>
+                    <button id="alegeCategorie" class="filtru" onclick="show('Categorie')">Alege categorie</button>
+                    <button id="ascundeCategorie" class="optiuni-filtre" onclick="ascunde('Categorie')">Ascunde</button>
+                    <button id="selectAllCategorie" class="optiuni-filtre"
+                        onclick="selectAll('checkboxCategorie',1)">Selecteaza tot</button>
+                    <button id="deselectAllCategorie" class="optiuni-filtre"
+                        onclick="selectAll('checkboxCategorie',2)">Deselecteaza tot</button>
+                    <br>
+                    <div id="listaCategorie">
+                        <form class="listaCheckbox" id="Categorie">
+
+                            <input type="checkbox" id="Autobuz" name="checkboxCategorie" value="Autobuz">
+                            <label for="Autobuz">Autobuz</label>
+                            <input type="checkbox" id="Automobil mixt" name="checkboxCategorie" value="Automobil mixt">
+                            <label for="Automobil mixt">Automobil mixt</label>
+                            <input type="checkbox" id="Autopropulsata lucrari" name="checkboxCategorie"
+                                value="Autopropulsata lucrari">
+                            <label for="Autopropulsata lucrari">Autopropulsata lucrari</label>
+                            <input type="checkbox" id="Autoremorcher" name="checkboxCategorie" value="Autoremorcher">
+                            <label for="Autoremorcher">Autoremorcher</label>
+                            <input type="checkbox" id="Autorulota" name="checkboxCategorie" value="Autorulota">
+                            <label for="Autorulota">Autorulota</label>
+                            <input type="checkbox" id="Autospeciala" name="checkboxCategorie" value="Autospeciala">
+                            <label for="Autospeciala">Autospeciala</label>
+                            <input type="checkbox" id="Autoturism" name="checkboxCategorie" value="Autoturism">
+                            <label for="Autoturism">Autoturism</label>
+                            <input type="checkbox" id="Autoutilitara" name="checkboxCategorie" value="Autoutilitara">
+                            <label for="Autoutilitara">Autoutilitara</label>
+                            <input type="checkbox" id="Microbuz" name="checkboxCategorie" value="Microbuz">
+                            <label for="Microbuz">Microbuz</label>
+                            <input type="checkbox" id="Moped" name="checkboxCategorie" value="Moped">
+                            <label for="Moped">Moped</label>
+                            <input type="checkbox" id="Motocicleta" name="checkboxCategorie" value="Motocicleta">
+                            <label for="Motocicleta">Motocicleta</label>
+                            <input type="checkbox" id="Remorca" name="checkboxCategorie" value="Remorca">
+                            <label for="Remorca">Remorca</label>
+                            <input type="checkbox" id="Tractor" name="checkboxCategorie" value="Tractor">
+                            <label for="Tractor">Tractor</label>
+                        </form>
+                    </div>
+                    <br>
+                    <button id="alegeBrand" class="filtru" onclick="show('Brand')">Alege brand</button>
+                    <button id="ascundeBrand" class="optiuni-filtre" onclick="ascunde('Brand')">Ascunde</button>
+                    <button id="selectAllBrand" class="optiuni-filtre" onclick="selectAll('checkboxBrand',1)">Selecteaza
+                        tot</button>
+                    <button id="deselectAllBrand" class="optiuni-filtre"
+                        onclick="selectAll('checkboxBrand',2)">Deselecteaza tot</button>
+                    <br>
+                    <div id="listaBrand">
+                        <form class="listaCheckbox" id="Brand">
+
+                            <input type="checkbox" id="Iveco" name="checkboxBrand" value="Iveco">
+                            <label for="Iveco">Iveco</label>
+                            <input type="checkbox" id="Mercedez Benz" name="checkboxBrand" value="Mercedez Benz">
+                            <label for="Mercedez Benz">Mercedez Benz</label>
+                            <input type="checkbox" id="Renault" name="checkboxBrand" value="Renault">
+                            <label for="Renault">Renault</label>
+                            <input type="checkbox" id="Dacia" name="checkboxBrand" value="Dacia">
+                            <label for="Dacia">Dacia</label>
+                            <input type="checkbox" id="Fiat" name="checkboxBrand" value="Fiat">
+                            <label for="Fiat">Fiat</label>
+                            <input type="checkbox" id="Nissan" name="checkboxBrand" value="Nissan">
+                            <label for="Nissan">Nissan</label>
+                            <input type="checkbox" id="Mitsubishi" name="checkboxBrand" value="Mitsubishi">
+                            <label for="Mitsubishi">Mitsubishi</label>
+                            <input type="checkbox" id="Ford" name="checkboxBrand" value="Ford">
+                            <label for="Ford">Ford</label>
+                            <input type="checkbox" id="Toyota" name="checkboxBrand" value="Toyota">
+                            <label for="Toyota">Toyota</label>
+                            <input type="checkbox" id="Volkswagen" name="checkboxBrand" value="Volkswagen">
+                            <label for="Volkswagen">Volkswagen</label>
+                        </form>
+                    </div>
+                    <br>
+                    <button class="filtru" onclick="drawAreaChart()">Aplica</button>
+                </div>
+
+
+
+            </div>
+            <div id="chart_div1"></div>
+            <div class="export-buttons">
+                <button id="export-svg-btn">Export to SVG</button>
+                <button id="export-webp-btn">Export to WebP</button>
+                <button id="export-csv-btn">Export to CSV</button>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- <script type="module"> import http from 'http';</script> -->
+    <script type="text/javascript" src="../js/main.js">
+        // console.log(1);
+        // google.charts.load("current", { packages: ["corechart"] });
+        // google.charts.setOnLoadCallback(drawAreaChart);
+        // window.onresize = drawAreaChart;
+    </script>
+    <script type="text/javascript">
+        google.charts.load("current", { packages: ["corechart"] });
+        google.charts.setOnLoadCallback(drawAreaChart);
+        window.onresize = drawAreaChart;
+    </script>
+</body>
+
+</html>

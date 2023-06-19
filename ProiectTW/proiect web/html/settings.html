@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings Page</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">Auto Park Smart Explorer</div>
+        <nav class="appbar">
+            <button id="home-btn">Home</button>
+            <button id="documentation-btn">Documentation</button>
+            <button id="logout-btn">Logout</button>
+        </nav>
+    </header>
+    <main>
+        <section class="settings">
+            <div class="settings-theme-Label">Theme Manager</div>
+            <div>
+                <label class="setting-label" for="theme">Choose a theme</label>
+                <br>
+                <select id="theme">
+                    <option value="white">White</option>
+                    <option value="dark">Dark</option>
+                </select>
+            </div>
+            <br>
+            <br>
+            <div class="settings-theme-Label"> Font Changer</div>
+            <div>
+                <label class="setting-label" for="font">Choose a font</label>
+                <br>
+                <select id="font">
+                    <option value="Arial">Arial</option>
+                    <option value="Helvetica">Helvetica</option>
+                    <option value="Times New Roman">Times New Roman</option>
+                    <option value="Verdana">Verdana</option>
+                </select>
+            </div>
+        </section>
+    </main>
+    <script src="../js/main.js"></script>
+</body>
+
+</html>

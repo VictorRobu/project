@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">Auto Park Smart Explorer</div>
+        <nav class="appbar">
+            <button id="home-btn">Home</button>
+            <button id="settings-btn">Settings</button>
+            <button id="documentation-btn">Documentation</button>
+            <button id="logout-btn">Logout</button>
+        </nav>
+    </header>
+    <aside class="sidebar">
+        <button id="bar-chart-btn">Bar Chart Visualization</button>
+        <button id="pie-chart-btn">Pie Chart Visualization</button>
+        <button id="area-chart-btn">Area Chart Visualization</button>
+        <button id="cartographic-btn">Cartographic Visualization</button>
+    </aside>
+    <div class="main">
+        <section class="home-section">
+            <div id="map-container" class="map-container">
+                <img id="romania-map" src="../images/romania-map.svg" alt="Romania Map" class="romania-map">
+            </div>
+        </section>
+        <div class="export-buttons">
+            <button id="export-svg-btn">Export to SVG</button>
+            <button id="export-webp-btn">Export to WebP</button>
+            <button id="export-csv-btn">Export to CSV</button>
+        </div>
+    </div>
+    <script src="../js/main.js"></script>
+</body>
+
+</html>
